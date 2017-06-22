@@ -1,0 +1,23 @@
+<table>
+	<thead>
+		<tr>
+			<th> start time </th>
+			<th> end time </th>
+			<th> date </th>
+			<th> person name </th>
+			<th> room id </th>
+			<th> comment </th>
+		</tr>
+	</thead>
+	<tbody ng-init="showReservations()">
+		<tr ng-repeat="reservation in reservations | orderBy: 'date'">
+			<td> {{ reservation.startTime }} </td>
+			<td> {{ reservation.endTime }} </td>
+			<td> {{ reservation.date }} </td>
+			<td> {{ reservation.personName }} </td>
+			<td> {{ reservation.roomId }} </td>
+			<td> {{ reservation.comment }} </td>
+		</tr>
+	</tbody>
+</table>
+

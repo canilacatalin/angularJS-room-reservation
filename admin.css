@@ -1,0 +1,67 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	height: 75px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+	margin-top: 12px;
+    display: block;
+    color: #A2A2D0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size: 30px;
+}
+
+input[type="text"]{
+	text-align: center;
+	font-family: ariel;
+	font-size: 20px;
+}
+
+.active {
+    color: white;
+}
+
+#logout {
+	float: right;
+    display: block;
+    color: #A2A2D0;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+	font-size: 30px;
+}
+
+td, th{
+	border-style: solid;
+	border-width: 2px;
+	text-align: center;
+	font-family: ariel;
+	width: 250px;
+	font-size: 20px;
+	padding: 5px;
+	
+}
+
+table {
+	padding: 60px;
+}
+
+.bit-container.editable .bit span{
+  display:none;  
+}
+.bit-container.editable .bit input{
+  display:inline;  
+}
+.bit-container .bit input{
+  display:none;  
+}

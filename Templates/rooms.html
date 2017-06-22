@@ -1,0 +1,62 @@
+<table>
+	<thead>
+		<tr>
+			<th> id </th>
+			<th> name </th>
+			<th> floor </th>
+			<th> capacity </th>
+			<th> actions </th>
+		</tr>
+	</thead>
+	<tbody ng-init="showRooms()">
+		<tr ng-repeat="room in rooms">
+			<td>
+				<div ng-hide="editingData[room.id]">  {{ room.id }} </div>
+				<div ng-show="editingData[room.id]"> <input type="text" ng-model="room.id" /> </div>
+			</td> 
+			<td>
+				<div ng-hide="editingData[room.id]">  {{ room.name }} </div>
+				<div ng-show="editingData[room.id]"> <input type="text" ng-model="room.name" /> </div>
+			</td>
+			<td>
+				<div ng-hide="editingData[room.id]">  {{ room.floor }} </div>
+				<div ng-show="editingData[room.id]"> <input type="text" ng-model="room.floor" /> </div>
+			</td>
+			<td>
+				<div ng-hide="editingData[room.id]">  {{ room.capacity }} </div>
+				<div ng-show="editingData[room.id]"> <input type="text" ng-model="room.capacity" /> </div>
+			</td>
+			
+			<td> 
+				<button ng-hide="editingData[room.id]" ng-click="edit(room)"> Edit </button> 
+				<button ng-show="editingData[room.id]" ng-click="saveEdit(room)"> Save edit </button>
+				<button ng-click="delete(room)"> Delete </button> 
+			</td>
+			
+		</tr>
+		
+		<tr> 
+			<td ng-hide="addButton"> 
+				<button  ng-click="addButton = true" > Add a new room</button>
+			</td>
+			<td ng-show="addButton" >
+				
+			</td>
+			<td  ng-show="addButton" >
+				<div> <input type="text" ng-model="name" /> </div>
+			</td>
+			<td  ng-show="addButton" >
+				<div> <input type="text" ng-model="floor" /> </div>
+			</td>
+			<td ng-show="addButton" >
+				<div > <input type="text" ng-model="capacity" /> </div>
+			</td>
+			<td ng-show="addButton" >
+				<button ng-click="addRoom(); clearInputs(); addButton = false"> Add room </button> 
+				<button ng-click="clearInputs(); addButton = false"> cancel </button> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+

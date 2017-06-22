@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="interface">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="interface.js"></script>
+<link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+<link rel="stylesheet" type="text/css" href="interface.css">
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" />
+<script src="js/jquery-1.8.2.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.9.1.custom.min.js" type="text/javascript"></script>
+<script src="js/i18n/jquery-ui-i18n.min.js" type="text/javascript"></script>
+</head>
+
+<body ng-controller="interfaceController">
+
+<h1> Welcome {{username}} </h1>
+
+<div id="loginPopup">
+	<label for="username">Username: </label> 
+	<input type="text" id="username" maxlength="15" ng-model="username"> 
+	<label for="password">Password: </label> 
+	<input type="password" id="password" maxlength="12" ng-model="password"><br>
+	<input type="button" id="submitButton" value="Login" ng-click="LogInCheck()" >
+	<input type="reset" value="Cancel" id="cancelPopup" ng-click="cancelButton()">
+</div>
+<div id="myModal" class="modal" ng-init="interfaceOpen()">
+
+  <div class="modal-content">
+   
+    <div class="modal-body" >
+
+	<button ng-click="userPage()" id="userInterface"> User </button>
+	<button ng-click="adminPage()" id="adminInterface"> Admin </button>
+	
+      
+  </div>
+   
+  </div>
+
+</div>
+
+</body>
+
+</html>

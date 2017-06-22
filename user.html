@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="user">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="user.js"></script>
+<link rel="stylesheet" type="text/css" href="user.css">
+</head>
+
+<body ng-controller="userController" ng-init="init()"> 
+
+<h1> Welcome to Reservation Room version ONE HUNDRED !  </h1>
+
+		<label for="capacity"> Capacity: </label> 
+		<input type="text" ng-model="capacity"> 
+		<br>
+		<label for="startDate"> Start date: </label>
+		<input type="text" datepicker="" placeholder="DD/MM/YYYY" ng-model="startDate" />
+						- 
+		<input type="text" datepicker="" placeholder="DD/MM/YYYY" ng-model="endDate" />
+		<label for="endDate"> End date </label>
+		
+		<br>
+		<label for="duration"> Duration: </label>
+		<input type="text" ng-model="duration">
+		<br>
+		<input type="button" value="Search available rooms" ng-click="resultsArray(reservations, rooms); showResultsTable()">
+	
+	<hr style="border: solid #ccc; border-width: 30px 0 0;  margin: 22px 0 21px; height: 30; ">
+
+	
+		<div id="tableContent"> 
+		
+		</div>
+	
+</body>
+
+</html>
